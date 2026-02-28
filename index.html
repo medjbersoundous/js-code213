@@ -1,15 +1,148 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <main>
-        <section>
-            <h1>this website is deployed</h1>
-            
-        </section>
-    </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Todo List — Exercise</title>
+    <style>
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: #0f1117;
+        color: #e0e0e0;
+        display: flex;
+        justify-content: center;
+        padding: 50px 20px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        gap: 200px;
+      }
+      .hint-area {
+        flex: 1;
+      }
+
+      .todo-area {
+        flex: 2;
+      }
+
+      h1 {
+        text-align: center;
+        color: #2dd4bf;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        font-family: "Courier New", monospace;
+      }
+
+      .input-row {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      #todoInput {
+        flex: 1;
+        padding: 10px 14px;
+        border-radius: 8px;
+        border: 1px solid #30363d;
+        background: #161b22;
+        color: #f0f6fc;
+        font-size: 1rem;
+        outline: none;
+        transition: border 0.2s;
+      }
+
+      #todoInput:focus {
+        border-color: #2dd4bf;
+      }
+
+      #addBtn {
+        padding: 10px 20px;
+        background: #2dd4bf;
+        color: #0f1117;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      #todoList {
+        list-style: none;
+      }
+
+      #todoList li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #161b22;
+        border: 1px solid #30363d;
+        border-radius: 8px;
+        padding: 12px 16px;
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+        cursor: pointer;
+      }
+
+      #todoList li.done {
+        text-decoration: line-through;
+        color: #8b949e;
+      }
+
+      .delete-btn {
+        background: none;
+        border: none;
+        color: #f87171;
+        font-size: 1.1rem;
+        cursor: pointer;
+        padding: 0 4px;
+      }
+
+      .hint-area {
+        background: #1e1e1e;
+        padding: 15px;
+        border-radius: 8px;
+        line-height: 1.5;
+        font-size: 0.95rem;
+        color: #c0c0c0;
+      }
+
+      .hint-area strong {
+        color: #2dd4bf;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hint-area">
+        <h2>Hints / Tasks</h2>
+        <ul>
+          <li>
+            Step 1: Select your elements using
+            <strong>getElementById</strong> or <strong>querySelector</strong>.
+          </li>
+          <li>
+            Step 2: When you click "Add", create a new <strong>li</strong> and
+            append it to the list.
+          </li>
+          <li>
+            Step 3: Toggle <strong>done</strong> class on tasks when clicked
+            (strike-through effect).
+          </li>
+          <li>Step 4: Add a delete button "✕" to remove a task.</li>
+        </ul>
+      </div>
+      <div class="todo-area">
+        <h1>Todo List</h1>
+        <div class="input-row">
+          <input type="text" id="todoInput" placeholder="Add a new task..." />
+          <button id="addBtn">Add</button>
+        </div>
+        <ul id="todoList"></ul>
+      </div>
+    </div>
+
+    <script src="todo.js"></script>
+  </body>
 </html>
