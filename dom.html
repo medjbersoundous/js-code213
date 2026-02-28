@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complete DOM Demo</title>
+    <style>
+      .highlight {
+        background-color: lightblue;
+        padding: 5px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .box {
+        padding: 5px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="mainTitle" class="test">DOM Demo</h1>
+    <p class="description">This is a paragraph.</p>
+    <button id="changeTextBtn">Change Title and  Description</button>
+    <button id="addItemBtn">Add List Item</button>
+
+    <section id="section1">
+      <ul id="list">
+        <li class="box">Item 1</li>
+        <li class="box">Item 2</li>
+        <li class="box">Item 3</li>
+      </ul>
+      <h1>hello</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+        sequi, possimus soluta iusto molestiae vitae reiciendis quaerat eos
+        ratione, quam temporibus ullam est eligendi perspiciatis rerum officia,
+        corrupti aliquid magnam!
+      </p>
+    </section>
+
+    <div class="container">
+      <p class="highlight">paragraph 1</p>
+      <p class="highlight">paragraph 2</p>
+    </div>
+
+    <form id="myForm">
+      <input type="text" id="nameInput" placeholder="Enter your name" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <button id="datasetBtn">Dataset Demo</button>
+
+    <h2>Scroll & Resize Demo</h2>
+    <div
+      id="scrollBox"
+      style="height: 150px; overflow: auto; border: 1px solid #ccc"
+    >
+      <div style="height: 500px; padding: 10px"><p>you scroll here</p></div>
+    </div>
+    <p id="scrollOutput"></p>
+    <p id="resizeOutput"></p>
+
+    <script src="domEn.js"></script>
+  </body>
+</html>
